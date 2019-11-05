@@ -6,6 +6,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 //@EnableCaching
+//springboot启动类
 @MapperScan("com.baizhi.dao")
 @org.mybatis.spring.annotation.MapperScan("com.baizhi.dao")//用来扫描项目中所有DAO接口
 public class CmfzApplication {
