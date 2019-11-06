@@ -10,13 +10,6 @@ import tk.mybatis.spring.annotation.MapperScan;
 public class CmfzApplication {
 
     public static void main(String[] args) {
-        System.out.println("进入启动类");
-        System.out.println("===========");
-        System.out.println("===========");
-
-        System.out.println("---------------");
-        System.out.println("---------------");
-        System.out.println("---------------");
         SpringApplication.run(CmfzApplication.class, args);
     }
 
