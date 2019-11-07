@@ -28,7 +28,7 @@ public class ChapterController {
 
     @RequestMapping("findAllChapter")
     public Map<String,Object> findAll(Integer page,Integer rows,String albumId){
-        return chapterService.selectChapterByBlbumId(page,rows,albumId);
+        return chapterService.findAll(page,rows,albumId);
     }
 
     @RequestMapping("edit")

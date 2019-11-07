@@ -1,5 +1,6 @@
 package com.baizhi.service.impl;
 
+import com.baizhi.annotation.RedisCache;
 import com.baizhi.dao.UserDao;
 import com.baizhi.entity.MonthAndCount;
 import com.baizhi.entity.User;
@@ -40,6 +41,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
+    @RedisCache
     public Map<String, Object> findAll(Integer page, Integer rows) {
         User user = new User();
         RowBounds rowBounds = new RowBounds((page-1)*rows,rows);

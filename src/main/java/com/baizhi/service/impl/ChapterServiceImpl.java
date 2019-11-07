@@ -19,7 +19,7 @@ public class ChapterServiceImpl implements ChapterService {
 
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
-    public Map<String, Object> selectChapterByBlbumId(Integer page, Integer rows, String albumId) {
+    public Map<String, Object> findAll(Integer page, Integer rows, String albumId) {
         Chapter chapter = new Chapter();
         chapter.setAlbumId(albumId);
         RowBounds rowBounds = new RowBounds((page-1)*rows,rows);

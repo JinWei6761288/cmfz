@@ -1,5 +1,6 @@
 package com.baizhi.service.impl;
 
+import com.baizhi.annotation.RedisCache;
 import com.baizhi.dao.ArticleDao;
 import com.baizhi.entity.Article;
 import com.baizhi.service.ArticleService;
@@ -18,6 +19,7 @@ public class ArticleServiceImpl implements ArticleService {
     private ArticleDao articleDao;
     @Override
     @Transactional(propagation = Propagation.SUPPORTS)
+    @RedisCache
     public Map<String, Object> findAll(Integer page, Integer rows) {
         Article article = new Article();
         RowBounds rowBounds = new RowBounds((page-1)*rows,rows);

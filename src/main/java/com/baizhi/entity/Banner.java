@@ -5,11 +5,12 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @Accessors(chain = true)
-public class Banner {
+public class Banner implements Serializable {
     @Id
     private String id;
     private String title;
